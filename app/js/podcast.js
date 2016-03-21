@@ -13,11 +13,7 @@ function injectScript(url) {
      item = response.query.results.feed.entry[i];
      text += '<tr>';
      text += '<td><a href="' + item.link.href + '" target="_blank">' + item.title + '</a></td>';
-     if(i<5) {
-       text+='<td><audio src="' + item.link.href + '" preload="none" controls></audio></td>';
-     } else {
-       text+='<td></td>';
-     }
+     text+='<td><audio src="' + item.link.href + '" preload="none" controls></audio></td>';
      text+='<td>' + item.duration.content + '</td>';
      text += '<td class="content">' + item.subtitle.content + '</td>';
      text += '<td class="date">' + item.date + '</td>';

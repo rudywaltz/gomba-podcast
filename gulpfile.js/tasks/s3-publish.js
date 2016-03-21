@@ -3,11 +3,8 @@
 var gulp = require('gulp');
 var config = require('../config/index');
 var awspublish = require('gulp-awspublish');
-// var argv = require('yargs').argv;
-
 
 var publisher =  awspublish.create({
-  region : 'eu-west-1',
   params: {
     Bucket: 'gombapresszo-podcast'
   }
