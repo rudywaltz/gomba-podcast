@@ -9,7 +9,7 @@ var awspublish = require('gulp-awspublish');
 var publisher =  awspublish.create({
   region : 'eu-west-1',
   params: {
-    Bucket: '	gombapresszo-podcast'
+    Bucket: 'gombapresszo-podcast'
   }
 });
 
