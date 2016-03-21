@@ -1,0 +1,16 @@
+#target {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.podcast {
+  box-shadow: 0 0 1px 2px #ccc;
+  flex-basis: 24%;
+  margin-bottom: 2vw;
+  padding: 5px;
+  &__title {
+    font-size: 1.5rem;
+    word-break: break-word;
+  }
+}

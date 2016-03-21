@@ -11,17 +11,17 @@ function injectScript(url) {
    var item;
    for (var i = 0, k = response.query.results.feed.entry.length; i < k; i++) {
      item = response.query.results.feed.entry[i];
-     text += '<tr>';
-     text += '<td><a href="' + item.link.href + '" target="_blank">' + item.title + '</a></td>';
-     text+='<td><audio src="' + item.link.href + '" preload="none" controls></audio></td>';
-     text+='<td>' + item.duration.content + '</td>';
-     text += '<td class="content">' + item.subtitle.content + '</td>';
-     text += '<td class="date">' + item.date + '</td>';
+     text += '<div class="podcast">';
+     text += '<h1 class="podcast__title"><a href="' + item.link.href + '" target="_blank">' + item.title + '</a></h1>';
+     text+='<div><audio src="' + item.link.href + '" preload="none" controls></audio></div>';
+     text+='<div>' + item.duration.content + '</div>';
+     text += '<div class="content">' + item.subtitle.content + '</div>';
+     text += '<time class="date">' + item.date + '</time>';
 
-     text += '</tr>';
+     text += '</div>';
    }
 
-   document.getElementById('table').innerHTML = text;
+   document.getElementById('target').innerHTML = text;
  }
 
  var init = function() {
