@@ -9,5 +9,5 @@ module.exports = {
   },
   files: config.src + '/js/**/*.js',
   src: 'app.js',
-  dest: config.dest + '/js',
+  dest: config.dest + '/js'
 };

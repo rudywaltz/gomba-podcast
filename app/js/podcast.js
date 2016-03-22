@@ -11,16 +11,15 @@ function injectScript(url) {
    var item;
    for (var i = 0, k = response.query.results.feed.entry.length; i < k; i++) {
      item = response.query.results.feed.entry[i];
-     text += '<div class="podcast">';
+     text += '<li class="podcast">';
      text += '<h1 class="podcast__title"><a href="' + item.link.href + '" target="_blank">' + item.title + '</a></h1>';
      text+='<div><audio src="' + item.link.href + '" preload="none" controls></audio></div>';
      text+='<div>' + item.duration.content + '</div>';
      text += '<div class="content">' + item.subtitle.content + '</div>';
      text += '<time class="date">' + item.date + '</time>';
 
-     text += '</div>';
+     text += '</li>';
    }
-
    document.getElementById('target').innerHTML = text;
  }
 
