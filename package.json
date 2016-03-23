@@ -4,13 +4,13 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "list.js": "^1.2.0"
+    "list.js": "1.2.0"
   },
   "devDependencies": {
     "browser-sync": "2.11.1",
     "browserify": "13.0.0",
     "del": "2.2.0",
-    "eslint": "^2.4.0",
+    "eslint": "2.4.0",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
     "gulp-awspublish": "3.0.1",
