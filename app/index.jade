@@ -9,8 +9,14 @@ html
       h1 Gombapresszó műsorok
       input(type="search" placeholder="keresés a műsorok között").search
       div
-        input(type="checkbox")#oldShow
-        label(for="oldShow") Csak régi adás
+        input(type="radio" name="showtype" value="all-show" checked)#all-show
+        label(for="all-show") Összes adás
+      div
+        input(type="radio" name="showtype" value="new-show")#new-show
+        label(for="new-show") Új adások
+      div
+        input(type="radio" name="showtype" value="old-show")#old-show
+        label(for="old-show") Régi adások
 
       hr
       ul#target.list

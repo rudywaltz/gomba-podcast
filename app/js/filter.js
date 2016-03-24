@@ -7,20 +7,28 @@ var options = {
 };
 
 var filterOldShow = function (list) {
-  var element = document.getElementById('oldShow');
-  element.addEventListener('change', function() {
+  var radios = document.getElementsByName('showtype');
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].onclick = function () {
+      showFilter(this.value);
+    }
+  }
+
+  var showFilter =  function (type) {
     list.filter(function(item) {
       var oldShowString = 'régi';
       var oldShow = item.values().content.toLowerCase().indexOf(oldShowString) > -1 ||
         item.values().podcast__title.toLowerCase().indexOf(oldShowString) > -1;
-      if(element.checked) {
+      var newShow = !oldShow;
+      if(type === "old-show") {
         return oldShow;
+      } else if (type === "new-show") {
+        return !oldShow;
       } else {
         return true;
       }
-    });
-    return false;
-  }, false);
+    })
+  };
 };
 
 
