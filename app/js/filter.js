@@ -9,14 +9,14 @@ var options = {
 var filterOldShow = function (list) {
   var element = document.getElementById('oldShow');
   element.addEventListener('change', function() {
-    console.log('change');
     list.filter(function(item) {
-      var oldShow = 'régi';
-      if (item.values().content.toLowerCase().indexOf(oldShow) > -1 ||
-        item.values().podcast__title.toLowerCase().indexOf(oldShow) > -1) {
-        return true;
+      var oldShowString = 'régi';
+      var oldShow = item.values().content.toLowerCase().indexOf(oldShowString) > -1 ||
+        item.values().podcast__title.toLowerCase().indexOf(oldShowString) > -1;
+      if(element.checked) {
+        return oldShow;
       } else {
-        return false;
+        return true;
       }
     });
     return false;

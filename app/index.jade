@@ -6,9 +6,13 @@ html
   body
 
     #podcast-wrapper
-      input(type="search").search
-      input(type="checkbox")#oldShow
-      label(for="oldShow") Régi Adás
+      h1 Gombapresszó műsorok
+      input(type="search" placeholder="keresés a műsorok között").search
+      div
+        input(type="checkbox")#oldShow
+        label(for="oldShow") Csak régi adás
+
+      hr
       ul#target.list
 
     script(src="../js/app.js")
