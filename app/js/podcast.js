@@ -1,5 +1,7 @@
 'use strict';
 
+var Filter = require('./filter');
+
 function injectScript(url) {
    var scriptElement = document.createElement('script');
    scriptElement.setAttribute('type', 'text/javascript');
@@ -21,6 +23,7 @@ function injectScript(url) {
      text += '</li>';
    }
    document.getElementById('target').innerHTML = text;
+   Filter.init();
  }
 
  var init = function() {
