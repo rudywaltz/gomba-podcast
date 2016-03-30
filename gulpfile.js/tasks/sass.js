@@ -9,12 +9,6 @@ gulp.task('sass', function() {
   return gulp.src(config.src)
     .pipe(sass(config.settings))
     .pipe(autoprefixer(config.autoprefixer))
-    .pipe(rev())
-    .pipe(gulp.dest(config.dest))
-    .pipe(rev.manifest({
-      base: './dest',
-      merge: true
-    }))
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({ stream: true }));
 });
