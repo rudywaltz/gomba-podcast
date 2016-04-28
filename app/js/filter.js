@@ -3,7 +3,7 @@
 var List = require('list.js');
 
 var options = {
-  valueNames: [ 'podcast__title', 'content' ]
+  valueNames: [ 'podcast__title', 'podcast_content', 'podcast__date' ]
 };
 
 var filterOldShow = function (list) {
