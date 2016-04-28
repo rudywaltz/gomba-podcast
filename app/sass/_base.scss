@@ -1,3 +1,19 @@
+//// debug baseline grid
+//$debug-grid: true;
+//// debug typeset elements, their cap height, and baseline
+//$debug-type: true;
+//// show some information about the current breakpoint and it's config
+//$debug-breakpoints: true;
+//$debug-allow: true;
+//@include megatype;
+//$sans: (
+//  font-family: 'Oswald, Arial, sans-serif',
+//  regular: normal,
+//  bold: bold,
+//  cap-height: 0.88
+//);
+
+
 * {
   &,
   &:before,
@@ -8,8 +24,8 @@
 
 body {
   color: #333;
-  font-family: 'Oswald', sans-serif;
-  line-height: 1.3;
+  @include typeset($sans, 16px, 2rem, 0, 0);
+  font-family: font-family-of($sans);
   padding: 1em 0;
 }
 
@@ -29,7 +45,6 @@ h3 {
 }
 
 h1 {
-  @include typeset($font: $sans, $fontsize: 38px, $lineheight: 38px, $leader: 2, $trailer: 2rem);
 }
 audio {
   width: 100%;
