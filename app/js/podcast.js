@@ -14,12 +14,13 @@ function injectScript(url) {
    for (var i = 0, k = response.query.results.feed.entry.length; i < k; i++) {
      item = response.query.results.feed.entry[i];
      text += '<li class="podcast">';
-     text +='<div class="podcast__duration">' + item.duration.content + '</div>';
      text += '<h1 class="podcast__title">' + item.title + '</h1>';
+     text += '<div class="podcast__meta">';
+     text += '<time class="podcast_date">' + item.date + '</time>';
+     text += '<div class="podcast__duration">' + item.duration.content + '</div>';
+     text += '</div>';
+     text += '<div class="podcast__content">' + item.subtitle.content + '</div>';
      text +='<audio src="' + item.link.href + '" preload="none" controls></audio>';
-     text += '<div class="content">' + item.subtitle.content + '</div>';
-     text += '<time class="date">' + item.date + '</time>';
-
      text += '</li>';
    }
    document.getElementById('target').innerHTML = text;
