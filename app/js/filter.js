@@ -3,7 +3,7 @@
 var List = require('list.js');
 
 var options = {
-  valueNames: [ 'podcast__title', 'podcast_content', 'podcast__date' ]
+  valueNames: [ 'podcast__title', 'podcast__content', 'podcast__date' ]
 };
 
 var filterOldShow = function (list) {
@@ -16,6 +16,7 @@ var filterOldShow = function (list) {
 
   var showFilter =  function (type) {
     list.filter(function(item) {
+      console.log(item.values());
       var oldShowString = 'régi';
       var oldShow = item.values().content.toLowerCase().indexOf(oldShowString) > -1 ||
         item.values().podcast__title.toLowerCase().indexOf(oldShowString) > -1;

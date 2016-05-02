@@ -1,17 +1,47 @@
-//// debug baseline grid
-//$debug-grid: true;
-//// debug typeset elements, their cap height, and baseline
-//$debug-type: true;
-//// show some information about the current breakpoint and it's config
-//$debug-breakpoints: true;
-//$debug-allow: true;
-//@include megatype;
-//$sans: (
-//  font-family: 'Oswald, Arial, sans-serif',
-//  regular: normal,
-//  bold: bold,
-//  cap-height: 0.88
-//);
+// debug baseline grid
+$debug-grid: true;
+// debug typeset elements, their cap height, and baseline
+$debug-type: false;
+// show some information about the current breakpoint and it's config
+$debug-breakpoints: false;
+$debug-allow: false;
+
+$breakpoint-map: (
+  0: (
+    start:      0px,
+    max:        420px,
+    rootsize:   12px
+  ),
+  1: (
+    start:      480px,
+    max:        560px,
+    rootsize:   14px
+  ),
+  2: (
+    start:      768px,
+    max:        840px,
+    rootsize:   16px
+  ),
+  3: (
+    start:      980px,
+    max:        1080px,
+    rootsize:   18px
+  ),
+  4: (
+    start:      1280px,
+    max:        1440px,
+    rootsize:   13px
+  )
+);
+
+$sans: (
+  font-family: 'Oswald, Arial, sans-serif',
+  regular: normal,
+  bold: bold,
+  cap-height: 0.88
+);
+
+@include megatype;
 
 
 * {
@@ -22,19 +52,26 @@
   }
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+
 body {
-  color: #333;
-  @include typeset($sans, 16px, 2rem, 0, 0);
+  line-height: 2rem;
   font-family: font-family-of($sans);
-  padding: 1em 0;
+  font-style: normal;
+  color: #333;
+  padding: 2rem 1rem;
 }
 
 
 h1,
 h2,
 h3 {
-  margin: 0.1em 0 .3em;
-
   a {
     &,
     &:active,
@@ -45,14 +82,60 @@ h3 {
 }
 
 h1 {
+  @include typeset($sans, 23px, 2, 0, 2);
 }
+
+p {
+  @include typeset($sans, 13px, 2, 0, 2);
+}
+
+.search {
+  border: 1px solid #ccc;
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  width: 20rem;
+  max-width: 100%;
+}
+
 audio {
   width: 100%;
 }
 
-.head {
- text-transform: uppercase;
+.checkbox {
+  display: none;
+  + label {
+    padding-left: 24px;
+    position: relative;
+    @include typeset($sans, 13px, 2, 0, 2);
+
+    &:before {
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &:checked + label {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      border-radius: 50%;
+      background: rebeccapurple;
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
 
+
 #podcast-wrapper {
+
 }

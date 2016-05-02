@@ -6,20 +6,22 @@ html
     link(href='https://fonts.googleapis.com/css?family=Oswald:400,700,300&subset=latin-ext' rel='stylesheet' type='text/css')
   body
 
-    #podcast-wrapper
-      h1.head Gombapresszó műsorok
-      input.search(type="search" placeholder="keresés a műsorok között")
-      div
-        input(type="radio" name="showtype" value="all-show" checked)#all-show
-        label(for="all-show") Összes adás
-      div
-        input(type="radio" name="showtype" value="new-show")#new-show
-        label(for="new-show") Új adások
-      div
-        input(type="radio" name="showtype" value="old-show")#old-show
-        label(for="old-show") Régi adások
+    .container
+      #podcast-wrapper
+        h1.head Gombapresszó műsorok
+        //input.search(type="search" placeholder="keresés a műsorok között")
+        //
+        //div
+        //  input(type="radio" class="checkbox" name="showtype" value="all-show" checked)#all-show
+        //  label(for="all-show") Összes adás
+        //div
+        //  input(type="radio" class="checkbox" name="showtype" value="new-show")#new-show
+        //  label(for="new-show") Új adások
+        //div
+        //  input(type="radio" class="checkbox" name="showtype" value="old-show")#old-show
+        //  label(for="old-show") Régi adások
 
-      hr
-      ul#target.list
+        //hr
+        ul#target.list
 
-    script(src="../js/app.js")
+      script(src="../js/app.js")

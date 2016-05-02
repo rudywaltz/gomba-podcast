@@ -16,10 +16,10 @@ function injectScript(url) {
      text += '<li class="podcast">';
      text += '<h1 class="podcast__title">' + item.title + '</h1>';
      text += '<div class="podcast__meta">';
-     text += '<time class="podcast_date">' + item.date + '</time>';
+     text += '<time class="podcast__date">' + item.date + '</time>';
      text += '<div class="podcast__duration">' + item.duration.content + '</div>';
      text += '</div>';
-     text += '<div class="podcast__content">' + item.subtitle.content + '</div>';
+     text += '<p class="podcast__content">' + item.subtitle.content + '</p>';
      text +='<audio src="' + item.link.href + '" preload="none" controls></audio>';
      text += '</li>';
    }
