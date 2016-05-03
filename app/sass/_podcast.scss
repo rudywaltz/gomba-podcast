@@ -24,8 +24,19 @@
   }
 
   audio {
+    height: 2rem;
     margin-top: auto;
-    margin-bottom: 5px;
+
+    &::-webkit-media-controls-panel {
+      height: 2rem;
+    }
+
+    &::-webkit-media-controls {
+      height: 2rem;
+    }
+    &::-webkit-media-controls-enclosure {
+      height: 2rem;
+    }
   }
 }
 
