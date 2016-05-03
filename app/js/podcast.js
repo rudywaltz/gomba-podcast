@@ -14,7 +14,7 @@ function injectScript(url) {
    for (var i = 0, k = response.query.results.feed.entry.length; i < k; i++) {
      item = response.query.results.feed.entry[i];
      text += '<li class="podcast">';
-     text += '<h1 class="podcast__title">' + item.title + '</h1>';
+     text += '<h2 class="podcast__title">' + item.title + '</h2>';
      text += '<div class="podcast__meta">';
      text += '<time class="podcast__date">' + item.date + '</time>';
      text += '<div class="podcast__duration">' + item.duration.content + '</div>';
