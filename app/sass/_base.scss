@@ -93,10 +93,6 @@ p {
   @include typeset($sans, 13px, 2, 0, 2);
 }
 
-ul {
-  margin: 0 -1rem;
-}
-
 hr {
   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,#ccc 50%);
   background-repeat: repeat-x;
