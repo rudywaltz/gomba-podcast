@@ -83,6 +83,7 @@ h3 {
 
 h1 {
   @include typeset($sans, 46px, 4, 0, 2);
+  text-transform: uppercase;
 }
 h2 {
   @include typeset($sans, 23px, 2, 0, 1);
@@ -90,6 +91,22 @@ h2 {
 
 p {
   @include typeset($sans, 13px, 2, 0, 2);
+}
+
+ul {
+  margin: 0 -1rem;
+}
+
+hr {
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,#ccc 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 50%;
+  border: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  height: 0;
 }
 
 .search {
@@ -118,6 +135,7 @@ audio {
   display: none;
   + label {
     padding-left: 24px;
+    padding-right: 1rem;
     position: relative;
     @include typeset($sans, 13px, 2, 0, 2);
 

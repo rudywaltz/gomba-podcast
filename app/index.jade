@@ -9,19 +9,16 @@ html
     .container
       #podcast-wrapper
         h1.head Gombapresszó műsorok
-        //input.search(type="search" placeholder="keresés a műsorok között")
-        //
-        //div
-        //  input(type="radio" class="checkbox" name="showtype" value="all-show" checked)#all-show
-        //  label(for="all-show") Összes adás
-        //div
-        //  input(type="radio" class="checkbox" name="showtype" value="new-show")#new-show
-        //  label(for="new-show") Új adások
-        //div
-        //  input(type="radio" class="checkbox" name="showtype" value="old-show")#old-show
-        //  label(for="old-show") Régi adások
+        input.search(type="search" placeholder="keresés a műsorok között")
+        div
+          input(type="radio" class="checkbox" name="showtype" value="all-show" checked)#all-show
+          label(for="all-show") Összes adás
+          input(type="radio" class="checkbox" name="showtype" value="new-show")#new-show
+          label(for="new-show") Új adások
+          input(type="radio" class="checkbox" name="showtype" value="old-show")#old-show
+          label(for="old-show") Régi adások
 
-        //hr
+        hr
         ul#target.list
 
       script(src="../js/app.js")

@@ -18,7 +18,7 @@ var filterOldShow = function (list) {
     list.filter(function(item) {
       console.log(item.values());
       var oldShowString = 'régi';
-      var oldShow = item.values().content.toLowerCase().indexOf(oldShowString) > -1 ||
+      var oldShow = item.values().podcast__content.toLowerCase().indexOf(oldShowString) > -1 ||
         item.values().podcast__title.toLowerCase().indexOf(oldShowString) > -1;
       var newShow = !oldShow;
       if(type === "old-show") {
