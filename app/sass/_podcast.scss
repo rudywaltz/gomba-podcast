@@ -13,19 +13,36 @@
   flex-basis: 300px;
   flex-shrink: 0;
   flex-grow: 1;
-  box-shadow: 0 0 1px 2px #ccc;
+  //box-shadow: 0 0 1px 2px #ccc;
   margin: 1rem;
-  padding: 1rem 1rem;
+  border: 1px solid rebeccapurple;
+  padding: calc(1rem - 1px);
 
 
   &__title {
+    @include typeset($sans, 23px, 2, 0, 1);
     color: #ea1d2c;
     word-break: break-word;
   }
 
+  &__date {
+    @include typeset($sans, 13px, 2, 0, 2);
+    float: left;
+  }
+
+  &__duration {
+    @include typeset($sans, 11px, 2, 0, 2);
+    float: right;
+  }
+
+  &__content {
+    @include typeset($sans, 14px, 2, 0, 2);
+  }
+
   audio {
-    height: 2rem;
     margin-top: auto;
+    height: 2rem;
+    width: 100%;
 
     &::-webkit-media-controls-panel {
       height: 2rem;
@@ -38,9 +55,4 @@
       height: 2rem;
     }
   }
-}
-
-
-.date {
-  //margin-top: auto;
 }

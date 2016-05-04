@@ -1,47 +1,6 @@
-// debug baseline grid
-$debug-grid: true;
-// debug typeset elements, their cap height, and baseline
-$debug-type: false;
-// show some information about the current breakpoint and it's config
-$debug-breakpoints: false;
-$debug-allow: false;
-
-$breakpoint-map: (
-  0: (
-    start:      0px,
-    max:        420px,
-    rootsize:   13px
-  ),
-  1: (
-    start:      480px,
-    max:        560px,
-    rootsize:   13px
-  ),
-  2: (
-    start:      768px,
-    max:        840px,
-    rootsize:   13px
-  ),
-  3: (
-    start:      980px,
-    max:        1080px,
-    rootsize:   13px
-  ),
-  4: (
-    start:      1280px,
-    max:        1440px,
-    rootsize:   13px
-  )
-);
-
-$sans: (
-  font-family: 'Oswald, Arial, sans-serif',
-  regular: normal,
-  bold: bold,
-  cap-height: 0.88
-);
-
 @include megatype;
+
+@include baseline-debug-grid;
 
 
 * {
@@ -82,16 +41,10 @@ h3 {
 }
 
 h1 {
-  @include typeset($sans, 46px, 4, 0, 2);
+  @include typeset($sans, 46px, 5, 0, 2);
   text-transform: uppercase;
 }
-h2 {
-  @include typeset($sans, 23px, 2, 0, 1);
-}
 
-p {
-  @include typeset($sans, 14px, 2, 0, 2);
-}
 
 hr {
   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,#ccc 50%);
@@ -112,19 +65,6 @@ hr {
   margin-bottom: 2rem;
   width: 20rem;
   max-width: 100%;
-}
-
-audio {
-  width: 100%;
-}
-.podcast__date {
-  @include typeset($sans, 13px, 2, 0, 2);
-  float: left;
-}
-
-.podcast__duration {
-  @include typeset($sans, 11px, 2, 0, 2);
-  float: right;
 }
 
 .checkbox {
@@ -159,9 +99,4 @@ audio {
       height: 10px;
     }
   }
-}
-
-
-#podcast-wrapper {
-
 }

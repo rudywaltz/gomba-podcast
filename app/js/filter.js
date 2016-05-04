@@ -16,7 +16,6 @@ var filterOldShow = function (list) {
 
   var showFilter =  function (type) {
     list.filter(function(item) {
-      console.log(item.values());
       var oldShowString = 'régi';
       var oldShow = item.values().podcast__content.toLowerCase().indexOf(oldShowString) > -1 ||
         item.values().podcast__title.toLowerCase().indexOf(oldShowString) > -1;

@@ -1,0 +1,47 @@
+// debug baseline grid
+$debug-grid: true;
+// debug typeset elements, their cap height, and baseline
+$debug-type: false;
+// show some information about the current breakpoint and it's config
+$debug-breakpoints: false;
+$debug-allow: false;
+
+$breakpoint-map: (
+  0: (
+    start:      0px,
+    max:        420px,
+    rootsize:   13px
+  ),
+  1: (
+    start:      480px,
+    max:        560px,
+    rootsize:   13px
+  ),
+  2: (
+    start:      768px,
+    max:        840px,
+    rootsize:   13px
+  ),
+  3: (
+    start:      980px,
+    max:        1080px,
+    rootsize:   13px
+  ),
+  4: (
+    start:      1280px,
+    max:        1440px,
+    rootsize:   13px
+  )
+);
+
+
+// enable formal baseline grid
+// snaps all type to the baseline grid
+$baseline-snap: true;
+
+$sans: (
+  font-family: 'Oswald, Arial, sans-serif',
+  regular: normal,
+  bold: bold,
+  cap-height: 0.88
+);
