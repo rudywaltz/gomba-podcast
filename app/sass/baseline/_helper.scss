@@ -1,0 +1,23 @@
+@function nounit($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem-go-px($value, $context: $root-size) {
+
+  @if unit($value) == "rem" {
+    $value : nounit($value) * nounit($root-size);
+    $value : $value * 1px;
+  }
+  @return $value;
+}
+
+@function px-go-rem($value, $context: $root-size) {
+  @if unit($context) == "rem" {
+    $context: rem-to-px($context);
+  }
+  @if unit($value) == "px" {
+    $value : nounit($value) / nounit($context);
+    $value : $value * 1rem;
+  }
+  @return $value;
+}

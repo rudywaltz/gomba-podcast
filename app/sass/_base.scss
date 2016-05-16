@@ -1,8 +1,5 @@
 @include megatype;
 
-//@include baseline-debug-grid;
-
-
 * {
   &,
   &:before,
@@ -13,6 +10,7 @@
 
 
 html, body {
+  background: #e2e1e0;
   height: 100%;
   margin: 0;
   max-width: 100%;
@@ -20,7 +18,7 @@ html, body {
 
 
 body {
-  line-height: 2rem;
+  line-height: 2;
   font-family: font-family-of($sans);
   font-style: normal;
   color: #333;
@@ -41,10 +39,14 @@ h3 {
 }
 
 h1 {
-  @include typeset($sans, 46px, 5, 0, 2);
+  @include typeset($sans,46px, 3, 0, 2);
   text-transform: uppercase;
 }
-
+//
+//h1.new {
+//  @include typo($font, 46px, 3, 0, 2);
+//  text-transform: uppercase;
+//}
 
 hr {
   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,#ccc 50%);
@@ -56,6 +58,11 @@ hr {
   padding-bottom: 1rem;
   margin: 0;
   height: 0;
+}
+
+.grid {
+  display: inline-block;
+  width: 50%;
 }
 
 .search {
@@ -76,6 +83,7 @@ hr {
     @include typeset($sans, 13px, 2, 0, 2);
 
     &:before {
+      background: #fff;
       border: 1px solid #ccc;
       border-radius: 50%;
       content: '';

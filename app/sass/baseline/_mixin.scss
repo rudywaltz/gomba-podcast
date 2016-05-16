@@ -1,0 +1,36 @@
+@mixin typo($font, $fontsize, $lineheight, $top: 0px, $bottom: 0px) {
+  $cap-height: map-get($font, cap-height);
+
+
+  $fontsize-rem: px-go-rem($fontsize);
+  $fontsize-calc: nounit($fontsize);
+
+  @if unitless($lineheight) {
+    $lineheight: $lineheight * 1rem;
+  }
+  @if unitless($bottom) {
+    $bottom: $bottom * 1rem;
+  }
+
+  @if unitless($top) {
+    $top: $top * 1rem;
+  }
+
+  $top: rem-go-px($top);
+  $bottom: rem-go-px($bottom);
+
+  $lineheight-calc: nounit(rem-go-px($lineheight));
+
+  $type-proportion_: $fontsize-calc * $cap-height;
+  $type-space_: 1px * ($lineheight-calc - $type-proportion_) / 2;
+  $shift: 0;
+  $type-top_: $top - $type-space_ + $shift;
+  $type-bottom_: $bottom - $type-space_ + $type-top_;
+
+  font-size: $fontsize-rem;
+  line-height: $lineheight;
+  margin-bottom: px-go-rem($type-bottom_);
+
+}
+
+

@@ -9,7 +9,7 @@
           // for horizontal grid, starts at center, is more complex to draw
         linear-gradient(to right,
           transparent 0px,
-          transparent $current-rootsize / 2 - 1px,
+          transparent $root-size / 2 - 1px,
           rgba(darken($debug-base-color, 5%), .1) $root-size / 2 - 1px,
           rgba(darken($debug-base-color, 5%), .1) $root-size / 2,
           transparent $root-size / 2,
