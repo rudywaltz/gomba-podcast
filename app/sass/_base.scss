@@ -38,15 +38,19 @@ h3 {
   }
 }
 
-h1 {
-  @include typeset($sans,46px, 3, 0, 2);
+h1.old {
+  @include typeset($sans,46px, 5, 0, 3);
   text-transform: uppercase;
 }
-//
-//h1.new {
-//  @include typo($font, 46px, 3, 0, 2);
-//  text-transform: uppercase;
-//}
+
+h1.new {
+  @include typo($font, 46px, 5, 0, 3);
+  text-transform: uppercase;
+}
+
+.grid {
+  width: 50%;
+}
 
 hr {
   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,#ccc 50%);

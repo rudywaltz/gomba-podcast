@@ -45,10 +45,23 @@
     @include typeset($sans, 14px, 2, 0, 2);
   }
 
-  audio {
+  &__player {
     margin-top: auto;
+  }
+
+  &__download {
+    font-size: 0;
+    float: right;
+
+    svg {
+      fill: #ea1d2c;
+      height: 30px;
+    }
+  }
+
+  audio {
     height: 2rem;
-    width: 100%;
+    width: calc(100% - 40px);
 
     &::-webkit-media-controls-panel {
       height: 2rem;
