@@ -22,7 +22,7 @@ function injectScript(url) {
      text += '</div>';
      text += '<p class="podcast__content">' + item.subtitle.content + '</p>';
      text += '<div class="podcast__player">';
-     text += '<a href="' + item.link.href + '" download class="podcast__download">' + svgDownload + '</a>';
+     text += '<a href="' + item.link.href + '" download class="podcast__download" title="Adás letöltése">' + svgDownload + '</a>';
      text += '<audio src="' + item.link.href + '" preload="none" controls></audio>';
      text += '</div>';
      text += '</li>';
