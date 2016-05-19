@@ -56,6 +56,13 @@
     svg {
       fill: #ea1d2c;
       height: 30px;
+      transition: fill .2s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        fill: #d21321;
+      }
     }
   }
 
