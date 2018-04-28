@@ -27,7 +27,7 @@
     "watchify": "3.11.0"
   },
   "engines": {
-    "node": "5.9.0"
+    "node": "8.11.1"
   },
   "author": "rudywaltz",
   "license": "ISC"
